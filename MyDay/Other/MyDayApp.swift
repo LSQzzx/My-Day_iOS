@@ -9,9 +9,10 @@ import SwiftUI
 
 @main
 struct MyDayApp: App {
+    @StateObject var viewModel = NewItemViewViewModel()
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            MainView().environmentObject(viewModel)
         }
     }
 }
